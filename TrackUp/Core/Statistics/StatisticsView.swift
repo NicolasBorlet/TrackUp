@@ -8,17 +8,15 @@ struct StatisticsView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    
-                    Text("Statistiques")
-                    
                     Picker("", selection: $index){
                         Text("Weekly").tag(0)
                         Text("Monthly").tag(1)
                         Text("Yearly").tag(2)
                     }
+                    .font(.FunnelSansRegular)
                     .pickerStyle(.segmented)
+                    .background(Color(red: 0.949, green: 0.969, blue: 0.969))
                     
-                    Text("Selected: \(index)")
                 }
                 .padding()
             }
@@ -35,8 +33,6 @@ struct StatisticsView: View {
             .sheet(isPresented: $showSettings) {
                 SettingsView()
             }
-            // Make the toolbar background white with blur
-            .toolbarBackground(.white, for: .navigationBar)
             .withGradientBackground()
         }
     }
