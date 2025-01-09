@@ -2,6 +2,10 @@ import SwiftUI
 
 struct StatisticsView: View {
     var body: some View {
-        Text("Statistiques")
+        VStack {
+            Text("Statistiques")
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .withGradientBackground()
     }
 }
