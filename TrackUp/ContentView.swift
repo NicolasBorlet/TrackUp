@@ -27,7 +27,7 @@ struct ContentView: View {
                     }
                     .tag(1)
                 
-                StatisticsView()
+                SpendingView()
                     .tabItem {
                         Image(systemName: "chart.pie.fill")
                             .foregroundColor(selectedTab == 2 ? .black : .gray)
