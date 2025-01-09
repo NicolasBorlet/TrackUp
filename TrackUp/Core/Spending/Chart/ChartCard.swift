@@ -13,13 +13,15 @@ struct ChartCard: View {
             HStack {
                 VStack(alignment: .leading) {
                     Text("Last 7 days")
+                        .font(.CardTitle)
                     HStack {
                         Text("$341.02")
-                        HStack {
+                        HStack(spacing: 0) {
                             Image(systemName: "arrow.down")
                             Text("11%")
                         }
                         .foregroundColor(Color.red)
+                        .font(.FunnelSansRegular)
                     }
                 }
                 
@@ -27,7 +29,9 @@ struct ChartCard: View {
                 
                 VStack(alignment: .trailing) {
                     Text("Avg day")
+                        .font(.CardTitle)
                     Text("$17")
+                        .font(.FunnelSansRegular)
                 }
             }
             SpendingChart()
