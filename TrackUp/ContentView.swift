@@ -16,9 +16,9 @@ struct ContentView: View {
                 HomeView()
                     .tabItem {
                         Image(systemName: "house.fill")
-                            .foregroundColor(selectedTab == 0 ? .black : .gray) // Noir si sélectionné, gris sinon
+                            .foregroundColor(selectedTab == 0 ? .black : .gray)
                     }
-                    .tag(0) // Tag pour le suivi de l'index
+                    .tag(0)
                 
                 CalendarView()
                     .tabItem {
@@ -44,7 +44,7 @@ struct ContentView: View {
             .toolbarBackground(.white, for: .tabBar)
             .toolbarBackground(.visible, for: .tabBar)
         }
-        .accentColor(.black)  // Couleur des éléments sélectionnés (comme l'icône et le texte)
+        .accentColor(.black)
     }
 }
 
