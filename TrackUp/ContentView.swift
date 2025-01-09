@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             Group {
-                HomeView()
+                HomeView(selectedTab: $selectedTab)
                     .tabItem {
                         Image(systemName: "house.fill")
                             .foregroundColor(selectedTab == 0 ? .black : .gray)

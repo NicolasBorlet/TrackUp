@@ -47,6 +47,6 @@ struct SpendingChart: View {
         }
         .foregroundStyle(.appYellow)
         .padding()
-        .frame(height: 300)
+        .frame(height: 200)
     }
 }

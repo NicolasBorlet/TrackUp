@@ -18,6 +18,26 @@ struct SpendingView: View {
                     .background(Color(hue: 1.0, saturation: 0.0, brightness: 0.954))
                     
                     ChartCard()
+                    
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Recent transactions")
+                            .foregroundStyle(.appGray)
+                            .font(.CardTitle)
+                        
+                        ExpenseCard(
+                            title: "Github Inc",
+                            subtitle: "Monthly",
+                            amount: "$11.00",
+                            dueDate: "due tomorrow"
+                        )
+                        
+                        ExpenseCard(
+                            title: "Github Inc",
+                            subtitle: "Monthly",
+                            amount: "$11.00",
+                            dueDate: "due tomorrow"
+                        )
+                    }
                 }
                 .padding()
             }
