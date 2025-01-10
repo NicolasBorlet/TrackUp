@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChartCard: View {
     var body: some View {
-        VStack {
+        VStack(spacing: 24) {
             HStack {
                 VStack(alignment: .leading) {
                     Text("Last 7 days")

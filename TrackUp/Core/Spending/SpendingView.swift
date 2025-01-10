@@ -19,6 +19,18 @@ struct SpendingView: View {
                     
                     ChartCard()
                     
+                    HStack(spacing: 12) {
+                        InfoCard(
+                            title: "Income",
+                            amount: "+$37.00"
+                        )
+                                                
+                        InfoCard(
+                            title: "Saving (0%)",
+                            amount: "$0"
+                        )
+                    }
+                    
                     VStack(alignment: .leading, spacing: 12) {
                         Text("Recent transactions")
                             .foregroundStyle(.appGray)
