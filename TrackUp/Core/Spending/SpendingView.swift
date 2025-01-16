@@ -3,7 +3,9 @@ import SwiftUI
 struct SpendingView: View {
     @State private var index: Int = 0
     @State private var showSettings = false
-    
+    @State private var selectedTransaction: TransactionDetailData? // New state for selected transaction
+    @State private var showDetailSheet = false // New state for showing the bottom sheet
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -36,18 +38,27 @@ struct SpendingView: View {
                             .foregroundStyle(.appGray)
                             .font(.CardTitle)
                         
+                        // Modified ExpenseCard to show transaction detail
                         ExpenseCard(
                             title: "Github Inc",
                             subtitle: "Monthly",
                             amount: "$11.00",
-                            dueDate: "due tomorrow"
+                            dueDate: "due tomorrow",
+                            onTap: {
+                                selectedTransaction = TransactionDetailData(title: "Github Inc", amount: "$11.00", dueDate: "due tomorrow") // Prepare data for bottom sheet
+                                showDetailSheet.toggle()
+                            }
                         )
                         
                         ExpenseCard(
                             title: "Github Inc",
                             subtitle: "Monthly",
                             amount: "$11.00",
-                            dueDate: "due tomorrow"
+                            dueDate: "due tomorrow",
+                            onTap: {
+                                selectedTransaction = TransactionDetailData(title: "Github Inc", amount: "$11.00", dueDate: "due tomorrow")
+                                showDetailSheet.toggle()
+                            }
                         )
                     }
                 }
@@ -69,4 +80,11 @@ struct SpendingView: View {
             .withGradientBackground()
         }
     }
+}
+
+// New struct for transaction detail data
+struct TransactionDetailData {
+    let title: String
+    let amount: String
+    let dueDate: String
 }
